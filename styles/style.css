@@ -286,15 +286,15 @@ h1 {
 }
 
 .mountains {
-  background-image: url(../assets/mountains.jpg);
+  background-image: url(../images/mountains.jpg);
 }
 
 .animals {
-  background-image: url(../assets/pupkit.jpg);
+  background-image: url(../images/pupkit.jpg);
 }
 
 .abstract {
-  background-image: url(../assets/abstract.jpg);
+  background-image: url(../images/abstract.jpg);
 }
 
 header {

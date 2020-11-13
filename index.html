@@ -45,25 +45,25 @@
                 <section>
                     <h3>Choose an audio you'd like to play:</h3>
                     <ul>
-                        <li><button class="ambient">Ambient</button></li>
-                        <li><button class="birds">Birds</button></li>
-                        <li><button class="rain">Rain</button></li>
-                        <li><button class="random">Random</button></li>
+                        <li><button class="audioBtn" value="ambientAudio">Ambient</button></li>
+                        <li><button class="audioBtn" value="birdsAudio">Birds</button></li>
+                        <li><button class="audioBtn" value="rainAudio">Rain</button></li>
+                        <li><button class="randomAudio" value="rainAudio">Random</button></li>
                         <li><button class="stop">Stop Audio</button></li>
                     </ul>
 
                     <audio controls="controls" loop="loop" id="ambientAudio">
-                        <source src="./ambient.mp3" type="audio/mpeg" />
+                        <source src="./sounds/ambient.mp3" type="audio/mpeg" />
                         Your browser does not support the audio element.
                     </audio>
 
                     <audio controls="controls" loop="loop" id="birdsAudio">
-                        <source src="./birds.mp3" type="audio/mpeg" />
+                        <source src="./sounds/birds.mp3" type="audio/mpeg" />
                         Your browser does not support the audio element.
                     </audio>
 
                     <audio controls="controls" loop="loop" id="rainAudio">
-                        <source src="./undertreeinrain.mp3" type="audio/mpeg" />
+                        <source src="./sounds/undertreeinrain.mp3" type="audio/mpeg" />
                         Your browser does not support the audio element.
                     </audio>
                 </section>
