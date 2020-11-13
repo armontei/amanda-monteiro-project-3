@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div id="background" class="background">
+        <div class="wrapper">
+            <header>
+                <h1>A Moment of Calm</h1>
+                <h2>Take some time to breathe through mindful meditation</h2>
+            </header>
+
+            <main>
+                <section>
+                    <h3>Choose a background image to help set the scene:</h3>
+                    <ul>
+                        <li><button class="backgroundBtn" value="mountains">Mountains</button></li>
+                        <li><button class="backgroundBtn" value="animals">Animals</button></li>
+                        <li><button class="backgroundBtn" value="abstract">Abstract</button></li>
+                        <li><button class="random" value="random">Random</button></li>
+                        <li><button class="reset" value="reset">Reset</button></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Choose how long you would like to meditate for:</h3>
+                    <ul>
+                        <li><button class="tenMin">10 minutes</button></li>
+                        <li><button class="sevenMin">7 minutes</button></li>
+                        <li><button class="fiveMin">5 mintues</button></li>
+                        <li><button class="twoMin">2 minutes</button></li>
+                    </ul>
+
+                    <div class="countdown">
+                        <span class="seconds"></span>
+                    </div>
+
+                </section>
+
+                <section>
+                    <h3>Choose an audio you'd like to play:</h3>
+                    <ul>
+                        <li><button class="ambient">Ambient</button></li>
+                        <li><button class="birds">Birds</button></li>
+                        <li><button class="rain">Rain</button></li>
+                        <li><button class="random">Random</button></li>
+                        <li><button class="stop">Stop Audio</button></li>
+                    </ul>
+
+                    <audio controls="controls" loop="loop" id="ambientAudio">
+                        <source src="./ambient.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <audio controls="controls" loop="loop" id="birdsAudio">
+                        <source src="./birds.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <audio controls="controls" loop="loop" id="rainAudio">
+                        <source src="./undertreeinrain.mp3" type="audio/mpeg" />
+                        Your browser does not support the audio element.
+                    </audio>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p>Created by Amanda Monteiro at <a href="https://junocollege.com/">Juno College</a></p>
+        </footer>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+    <script src="script.js"></script>
+</body>
+</html>

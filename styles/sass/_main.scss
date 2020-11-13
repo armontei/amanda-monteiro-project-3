@@ -1,0 +1,95 @@
+.background {
+    background-color: plum;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.mountains {
+    background-image: url(../assets/mountains.jpg);
+}
+
+.animals {
+    background-image: url(../assets/pupkit.jpg);
+}
+
+.abstract {
+    background-image: url(../assets/abstract.jpg);
+}
+
+header {
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+.mountains h3 {
+    color: blue;
+}
+
+.animals h3 {
+    color: green;
+}
+
+.abstract h3 {
+    color: purple;
+}
+
+// .countdownBar{
+//     position: absolute;
+//     left: 100px;
+//     width: 500px;
+//     height: 10px;
+//     top: 100px;
+//     border: 2px solid black;
+//     background: linear-gradient(to right, white, blue);
+// }
+
+// .timeLeft {
+//     float: right;
+//     background: lightgrey;
+//     height: 10px;
+// }
+
+section {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px;
+}
+
+.seconds {
+    font-size: 25px;
+    color: white;
+    transition: all 0.3s;
+}
+
+audio {
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    opacity: 0.5;
+}
+
+footer p {
+    text-align: center;
+}
+
+
+// hover over timer to hide / display - bar instead of timer
