@@ -349,9 +349,9 @@ button {
   cursor: pointer;
   margin: 10px 7px;
   border-radius: 20px;
-  background-color: #e2f2fd;
-  border: 2px solid #afefe4;
-  text-shadow: 1px 1px #afefe4;
+  background-color: transparent;
+  border: 2px solid #e2f2fd;
+  text-shadow: 1px 1px #e2f2fd;
 }
 
 .minutes,
