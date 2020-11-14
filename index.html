@@ -9,12 +9,13 @@
 </head>
 <body>
     <div id="background" class="background">
-        <div class="wrapper">
-            <header>
-                <h1>A Moment of Calm</h1>
-                <h2>Take some time to breathe through mindful meditation</h2>
-            </header>
+        
+        <header>
+            <h1>A Moment of Calm</h1>
+            <h2>Take some time to breathe through mindful meditation</h2>
+        </header>
 
+        <div class="wrapper">
             <main>
                 <section>
                     <h3>Choose a background image to help set the scene:</h3>
@@ -22,24 +23,9 @@
                         <li><button class="backgroundBtn" value="mountains">Mountains</button></li>
                         <li><button class="backgroundBtn" value="animals">Animals</button></li>
                         <li><button class="backgroundBtn" value="abstract">Abstract</button></li>
-                        <li><button class="random" value="random">Random</button></li>
-                        <li><button class="reset" value="reset">Reset</button></li>
+                        <li><button class="randomBkgBtn" value="random">Random Background</button></li>
+                        <li><button class="resetBtn" value="reset">Reset Background</button></li>
                     </ul>
-                </section>
-
-                <section>
-                    <h3>Choose how long you would like to meditate for:</h3>
-                    <ul>
-                        <li><button class="tenMin">10 minutes</button></li>
-                        <li><button class="sevenMin">7 minutes</button></li>
-                        <li><button class="fiveMin">5 mintues</button></li>
-                        <li><button class="twoMin">2 minutes</button></li>
-                    </ul>
-
-                    <div class="countdown">
-                        <span class="seconds"></span>
-                    </div>
-
                 </section>
 
                 <section>
@@ -48,25 +34,50 @@
                         <li><button class="audioBtn" value="ambientAudio">Ambient</button></li>
                         <li><button class="audioBtn" value="birdsAudio">Birds</button></li>
                         <li><button class="audioBtn" value="rainAudio">Rain</button></li>
-                        <li><button class="randomAudio" value="rainAudio">Random</button></li>
-                        <li><button class="stop">Stop Audio</button></li>
+                        <li><button class="randomAudioBtn" value="rainAudio">Random Audio</button></li>
+                        <li><button class="pauseAudioBtn">Pause Audio</button></li>
                     </ul>
-
+                
                     <audio controls="controls" loop="loop" id="ambientAudio">
                         <source src="./sounds/ambient.mp3" type="audio/mpeg" />
                         Your browser does not support the audio element.
                     </audio>
-
+                
                     <audio controls="controls" loop="loop" id="birdsAudio">
                         <source src="./sounds/birds.mp3" type="audio/mpeg" />
                         Your browser does not support the audio element.
                     </audio>
-
+                
                     <audio controls="controls" loop="loop" id="rainAudio">
                         <source src="./sounds/undertreeinrain.mp3" type="audio/mpeg" />
                         Your browser does not support the audio element.
                     </audio>
                 </section>
+
+                <section>
+                    <h3>Choose how long you would like to meditate for:</h3>
+                    <ul>
+                        <li><button class="timerBtn" value="10">10 min</button></li>
+                        <li><button class="timerBtn" value="5">5 min</button></li>
+                        <li><button class="timerBtn" value="2">2 min</button></li>
+                        <li><button class="randomTimerBtn">Random Time</button></li>
+                        <li><button class="stopTimerBtn">Stop Timer</button></li>
+                    </ul>
+
+                    <!-- form with drop down selection/submit instead? -->
+
+                    <div>
+                        <span class="minutes"></span>
+                        <span class="seconds"></span>
+                    </div>
+
+                </section>
+
+                <section>
+                    <div class="circleAnimation hidden">
+                    </div>
+                </section>
+                
             </div>
         </main>
         <footer>
