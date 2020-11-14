@@ -271,14 +271,9 @@ button {
   color: #575365;
 }
 
-h1 {
-  font-family: 'Caveat', cursive;
-  font-size: 7rem;
-}
-
 .background {
-  background: -webkit-gradient(linear, left bottom, left top, from(#6f6576), to(#d4c5e2));
-  background: linear-gradient(0deg, #6f6576 0%, #d4c5e2 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#d4c5e2), to(#afefe4));
+  background: linear-gradient(0deg, #d4c5e2 0%, #afefe4 100%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -296,7 +291,7 @@ h1 {
 }
 
 .abstract {
-  background-image: url(../images/abstract.jpg);
+  background-image: url(../images/magenta.jpg);
 }
 
 header {
@@ -310,10 +305,16 @@ h1 {
   padding-bottom: 20px;
 }
 
+h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 7.5rem;
+}
+
 h2 {
   font-style: italic;
-  font-weight: 200;
+  font-weight: 100;
   padding-bottom: 40px;
+  font-size: 3rem;
 }
 
 ul {
@@ -323,6 +324,8 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .mountains h3 {
@@ -346,9 +349,9 @@ button {
   cursor: pointer;
   margin: 10px 7px;
   border-radius: 20px;
-  background-color: #afefe4;
-  border: 2px solid #e2f2fd;
-  text-shadow: 1px 1px #e2f2fd;
+  background-color: #e2f2fd;
+  border: 2px solid #afefe4;
+  text-shadow: 1px 1px #afefe4;
 }
 
 .minutes,

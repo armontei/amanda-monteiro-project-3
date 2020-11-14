@@ -1,5 +1,5 @@
 .background {
-    background: linear-gradient(0deg, $oldLavender 0%, $thistle 100%);
+    background: linear-gradient(0deg, $thistle 0%, $blueGreen 100%);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -17,7 +17,7 @@
 }
 
 .abstract {
-    background-image: url(../images/abstract.jpg);
+    background-image: url(../images/magenta.jpg);
 }
 
 header {
@@ -32,15 +32,22 @@ h1 {
     padding-bottom: 20px;
 }
 
+h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 7.5rem;
+}
+
 h2 {
     font-style: italic;
-    font-weight: 200;
+    font-weight: 100;
     padding-bottom: 40px;
+    font-size: 3rem;
 }
 
 ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .mountains h3 {
@@ -55,22 +62,6 @@ ul {
     color: purple;
 }
 
-// .countdownBar{
-//     position: absolute;
-//     left: 100px;
-//     width: 500px;
-//     height: 10px;
-//     top: 100px;
-//     border: 2px solid black;
-//     background: linear-gradient(to right, white, blue);
-// }
-
-// .timeLeft {
-//     float: right;
-//     background: lightgrey;
-//     height: 10px;
-// }
-
 section {
     margin: 20px 0;
 }
@@ -80,9 +71,9 @@ button {
     cursor: pointer;
     margin: 10px 7px;
     border-radius: 20px;
-    background-color: $blueGreen;
-    border: 2px solid $aliceBlue;
-    text-shadow: 1px 1px $aliceBlue;
+    background-color: $aliceBlue;
+    border: 2px solid $blueGreen;
+    text-shadow: 1px 1px $blueGreen;
 }
 
 .minutes,
