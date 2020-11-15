@@ -11,68 +11,68 @@
 </head>
 <body>
     <div id="background" class="background">
+        <div class="viewHeight">
+            <header>
+                <h1>A Moment of Calm</h1>
+                <h2>Take time to breathe through meditation</h2>
+            </header>
 
-        <header>
-            <h1>A Moment of Calm</h1>
-            <h2>Take time to breathe through meditation</h2>
-        </header>
+            <div class="wrapper">
+                <main>
+                    <section>
+                        <h3>Choose a background image to help set the scene:</h3>
+                        <ul>
+                            <li><button class="backgroundBtn" value="mountains">Mountains</button></li>
+                            <li><button class="backgroundBtn" value="beach">Beach</button></li>
+                            <li><button class="backgroundBtn" value="trees">Trees</button></li>
+                            <li><button class="randomBkgBtn" value="random">Random</button></li>
+                            <li><button class="resetBtn" value="reset">Reset</button></li>
+                        </ul>
+                    </section>
 
-        <div class="wrapper">
-            <main>
-                <section>
-                    <h3>Choose a background image to help set the scene:</h3>
-                    <ul>
-                        <li><button class="backgroundBtn" value="mountains">Mountains</button></li>
-                        <li><button class="backgroundBtn" value="beach">Beach</button></li>
-                        <li><button class="backgroundBtn" value="trees">Trees</button></li>
-                        <li><button class="randomBkgBtn" value="random">Random</button></li>
-                        <li><button class="resetBtn" value="reset">Reset</button></li>
-                    </ul>
+                    <section>
+                        <h3>Choose an audio you'd like to play:</h3>
+                        <ul>
+                            <li><button class="audioBtn" value="ambientAudio">Ambient</button></li>
+                            <li><button class="audioBtn" value="birdsAudio">Birds</button></li>
+                            <li><button class="audioBtn" value="rainAudio">Rain</button></li>
+                            <li><button class="randomAudioBtn" value="rainAudio">Random</button></li>
+                            <li><button class="pauseAudioBtn">Pause</button></li>
+                        </ul>
+                    
+                        <audio controls="controls" loop="loop" id="ambientAudio">
+                            <source src="./sounds/ambient.mp3" type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                        </audio>
+                    
+                        <audio controls="controls" loop="loop" id="birdsAudio">
+                            <source src="./sounds/birds.mp3" type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                        </audio>
+                    
+                        <audio controls="controls" loop="loop" id="rainAudio">
+                            <source src="./sounds/undertreeinrain.mp3" type="audio/mpeg" />
+                            Your browser does not support the audio element.
+                        </audio>
+                    </section>
+
+                    <section>
+                        <h3>Choose how long you would like to meditate for:</h3>
+                        <ul>
+                            <li><button class="timerBtn" value="10">10 min</button></li>
+                            <li><button class="timerBtn" value="5">5 min</button></li>
+                            <li><button class="timerBtn" value="2">2 min</button></li>
+                            <li><button class="randomTimerBtn">Random</button></li>
+                            <li><button class="stopTimerBtn">Stop</button></li>
+                        </ul>
+
+
+                        <div class="timerDisplay">
+                            <span class="timer"></span>
+                            <p>click here for visualizer</p>
+                        </div>
                 </section>
-
-                <section>
-                    <h3>Choose an audio you'd like to play:</h3>
-                    <ul>
-                        <li><button class="audioBtn" value="ambientAudio">Ambient</button></li>
-                        <li><button class="audioBtn" value="birdsAudio">Birds</button></li>
-                        <li><button class="audioBtn" value="rainAudio">Rain</button></li>
-                        <li><button class="randomAudioBtn" value="rainAudio">Random</button></li>
-                        <li><button class="pauseAudioBtn">Pause</button></li>
-                    </ul>
-                
-                    <audio controls="controls" loop="loop" id="ambientAudio">
-                        <source src="./sounds/ambient.mp3" type="audio/mpeg" />
-                        Your browser does not support the audio element.
-                    </audio>
-                
-                    <audio controls="controls" loop="loop" id="birdsAudio">
-                        <source src="./sounds/birds.mp3" type="audio/mpeg" />
-                        Your browser does not support the audio element.
-                    </audio>
-                
-                    <audio controls="controls" loop="loop" id="rainAudio">
-                        <source src="./sounds/undertreeinrain.mp3" type="audio/mpeg" />
-                        Your browser does not support the audio element.
-                    </audio>
-                </section>
-
-                <section>
-                    <h3>Choose how long you would like to meditate for:</h3>
-                    <ul>
-                        <li><button class="timerBtn" value="10">10 min</button></li>
-                        <li><button class="timerBtn" value="5">5 min</button></li>
-                        <li><button class="timerBtn" value="2">2 min</button></li>
-                        <li><button class="randomTimerBtn">Random</button></li>
-                        <li><button class="stopTimerBtn">Stop</button></li>
-                    </ul>
-
-
-                    <div class="timerDisplay">
-                        <span class="timer"></span>
-                        <p>click here for visualizer</p>
-                    </div>
-
-                </section>
+            </div><!-- viewHeight div -->
                 
                 <section class="circleAnimation">
                     <div class="circle">

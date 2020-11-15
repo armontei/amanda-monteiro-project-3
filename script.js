@@ -1,15 +1,21 @@
 // creating a namespace
 const app = {};
 
+// BACKGROUND SECTION
+// function for changing background
+app.newBackground = () => {
+    // removing previous background if another button was already pressed and adding new background
+    $('#background').removeClass('mountains beach trees');
+    $('#background').toggleClass(displayedBackground);
+}
+
 // changing to the selected background when button is pressed
 app.backgroundChange = () => {
     
     $('.backgroundBtn').on('click', function () {
-        const chosenBackground = $(this).val();
+        displayedBackground = $(this).val();
 
-        // removing previous background if another button was already pressed and adding chosen background
-        $('#background').removeClass('mountains beach trees');
-        $('#background').toggleClass(chosenBackground);
+        app.newBackground();
     });
 
     // background array
@@ -17,11 +23,9 @@ app.backgroundChange = () => {
 
     // getting a random background from background array
     $('.randomBkgBtn').on('click', function () {
-        const randomBackground = backgroundArray[Math.floor(Math.random() * backgroundArray.length)];
+        displayedBackground = backgroundArray[Math.floor(Math.random() * backgroundArray.length)];
 
-        // removing previous background if another button was already pressed and adding random background
-        $('#background').removeClass('mountains beach trees');
-        $('#background').toggleClass(randomBackground);
+        app.newBackground();
     });
 
     // reset to original background
@@ -30,27 +34,31 @@ app.backgroundChange = () => {
     });
 };
 
+
+// AUDIO SECTION
+app.audio = () => {
+    // pausing previous audio if another button was already pressed and playing chosen audio
+    $('audio').trigger("pause");
+    $('#' + seclectedAudio).trigger("play");
+};
+
 // play selected audio when button is pressed
 app.audioPlay = () => {
 
     $(".audioBtn").on('click', function () {
-        const chosenAudio = $(this).val();
+        seclectedAudio = $(this).val();
 
-        // pausing previous audio if another button was already pressed and playing chosen audio
-        $('audio').trigger("pause");
-        $('#' + chosenAudio).trigger("play");
+        app.audio();
     });
 
     // audio array
-    const audioArray = ['#ambientAudio', '#birdsAudio', '#rainAudio'];
+    audioArray = ['ambientAudio', 'birdsAudio', 'rainAudio'];
 
     // play a random audio
     $('.randomAudioBtn').on('click', function () {
-        const randomAudio = audioArray[Math.floor(Math.random() * audioArray.length)];
+        seclectedAudio = audioArray[Math.floor(Math.random() * audioArray.length)];
 
-        // pausing previous audio if another button was already pressed and playing random audio
-        $('audio').trigger("pause");
-        $(randomAudio).trigger("play");
+        app.audio();
     });
 
     // pause audio that is currently playing
@@ -60,37 +68,49 @@ app.audioPlay = () => {
 };
 
 
-//declaring variable in the global scope to use in timer function
+// COUNTDOWN SECTION
+// declaring variable in the global scope to use in timer function
 app.countdown; 
+
+// declaring function that displays the time
+app.addTime = () => {
+    // clearing out previous time if another button was already pressed
+    clearInterval(app.countdown);
+
+    app.countdown = setInterval(function () {
+        // converting the total seconds to display as minutes
+        // inspo code to convert total seconds to minutes from https://youtu.be/x7WJEmxNlEs
+        minutes = Math.floor(timeAmount / 60);
+        seconds = timeAmount % 60;
+
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        $('.timer').text(minutes + " : " + seconds);
+        timeAmount--;
+
+        $('.timerDisplay').show();
+
+        // clearing timer so it doesn't go into negative numbers
+        if (timeAmount < 0) {
+            app.stopCountdown();
+        };
+    }, 1000);
+}
+
+// declaring function to use when timer is stopped
+app.stopCountdown = () => {
+    clearInterval(app.countdown);
+    $('.timer').text("You're done! Good job!");
+    alert("You've finishd!");
+    $(".circle").css("animation-play-state", "paused")
+}
+
 // adding timer when button is pressed
-app.timer = () => {
-    
+app.timer = () => {    
     $('.timerBtn').on('click', function () {
-        chosenTime = $(this).val() * 60;
+        timeAmount = $(this).val() * 60;
 
-        // clearing out previous time if another button was already pressed
-        clearInterval(app.countdown);
-
-        app.countdown = setInterval(function () {
-            // converting the total seconds to display as minutes
-            // inspo code to convert total seconds to minutes from https://youtu.be/x7WJEmxNlEs
-            minutes = Math.floor(chosenTime / 60);
-            seconds = chosenTime % 60;
-
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-
-            $('.timer').text(minutes + " : " + seconds);
-            chosenTime--;
-
-            $('.timerDisplay').show();
-
-            // clearing timer so it doesn't go into negative numbers
-            if (chosenTime < 0) {
-                clearInterval(app.countdown);
-                $('.timer').text("You're done! Good job!");
-                alert("You've finishd!");
-            };
-        }, 1000);
+        app.addTime();
     });
 
     // timer array
@@ -98,31 +118,9 @@ app.timer = () => {
 
     // add a timer with random amount of time
     $('.randomTimerBtn').on('click', function () {
-        randomTimer = timerArray[Math.floor(Math.random() * timerArray.length)];
+        timeAmount = timerArray[Math.floor(Math.random() * timerArray.length)];
 
-        // clearing out previous time if another button was already pressed
-        clearInterval(app.countdown);
-
-        app.countdown = setInterval(function () {
-            // converting the total seconds to display as minutes
-            // inspo code to convert total seconds to minutes from https://youtu.be/x7WJEmxNlEs
-            minutes = Math.floor(randomTimer / 60);
-            seconds = randomTimer % 60;
-
-            seconds = seconds < 10 ? '0' + seconds : seconds;
-
-            $('.timer').text(minutes + " : " + seconds);
-            randomTimer--;
-
-            $('.timerDisplay').show();
-
-            // clearing timer so it doesn't go into negative numbers
-            if (randomTimer < 0) {
-                clearInterval(app.countdown);
-                $('.timer').text("You're done! Good job!");
-                alert("You've finishd!");
-            };
-        }, 1000);
+        app.addTime();
     });
 
     // stop timer
@@ -130,17 +128,24 @@ app.timer = () => {
         clearInterval(app.countdown);
         $('.timer').text("Timer has stopped!");
         $('.timerDisplay').show();
+        $('.timerDisplay p').hide();
+        $(".circle").css("animation-play-state", "paused");
     });
 };
 
 
 // adding visualizer when timer is clicker
-
 app.visualize = () => {
     $('.timerDisplay').on('click', function () {
-        $(".circle").css("animation-play-state", "running");
+        $('.timerDisplay p').hide();
+        $('.circleAnimation').css("height", "100vh");
+        $('.circle').css("animation-play-state", "running");
+        $('html').animate({
+            scrollTop: $('.circleAnimation').offset().top
+        }, 1000);
     });
 };
+
 
 // initialize the app
 app.init = () => {

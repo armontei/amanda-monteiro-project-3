@@ -281,10 +281,13 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100vh;
   margin: 0;
   text-align: center;
   background-attachment: fixed;
+}
+
+.viewHeight {
+  min-height: 100vh;
 }
 
 .mountains {
@@ -362,9 +365,7 @@ button {
 }
 
 .circleAnimation {
-  display: none;
   padding: 50px 0;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -388,33 +389,33 @@ button {
 
 @-webkit-keyframes circle {
   0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(2.5);
-            transform: scale(2.5);
+    -webkit-transform: scale(3);
+            transform: scale(3);
     background-color: #d4c5e2;
   }
   100% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes circle {
   0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   50% {
-    -webkit-transform: scale(2.5);
-            transform: scale(2.5);
+    -webkit-transform: scale(3);
+            transform: scale(3);
     background-color: #d4c5e2;
   }
   100% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
