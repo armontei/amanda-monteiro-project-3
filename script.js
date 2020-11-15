@@ -1,5 +1,5 @@
 // creating a namespace
-const app = {}
+const app = {};
 
 // changing to the selected background when button is pressed
 app.backgroundChange = () => {
@@ -60,9 +60,9 @@ app.audioPlay = () => {
 };
 
 
-// adding timer when button is pressed
+//declaring variable in the global scope to use in timer function
 app.countdown; 
-
+// adding timer when button is pressed
 app.timer = () => {
     
     $('.timerBtn').on('click', function () {
@@ -89,7 +89,7 @@ app.timer = () => {
                 clearInterval(app.countdown);
                 $('.timer').text("You're done! Good job!");
                 alert("You've finishd!");
-            }
+            };
         }, 1000);
     });
 
@@ -121,29 +121,33 @@ app.timer = () => {
                 clearInterval(app.countdown);
                 $('.timer').text("You're done! Good job!");
                 alert("You've finishd!");
-            }
+            };
         }, 1000);
     });
 
     // stop timer
     $('.stopTimerBtn').on('click', function () {
         clearInterval(app.countdown);
-        $('.timer').text("Timer has been stopped!");
+        $('.timer').text("Timer has stopped!");
         $('.timerDisplay').show();
     });
 };
 
 
 // adding visualizer when timer is clicker
-// app.visualize = () => {
 
-// };
+app.visualize = () => {
+    $('.timerDisplay').on('click', function () {
+        $(".circle").css("animation-play-state", "running");
+    });
+};
 
 // initialize the app
 app.init = () => {
     app.backgroundChange();
     app.audioPlay();
     app.timer();
+    app.visualize();
 };
 
 // wait until the document is ready

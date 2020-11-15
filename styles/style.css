@@ -284,6 +284,7 @@ body {
   min-height: 100vh;
   margin: 0;
   text-align: center;
+  background-attachment: fixed;
 }
 
 .mountains {
@@ -333,20 +334,8 @@ ul {
       flex-wrap: wrap;
 }
 
-.mountains h3 {
-  color: blue;
-}
-
-.beach h3 {
-  color: green;
-}
-
-.trees h3 {
-  color: purple;
-}
-
 section {
-  margin: 20px 0;
+  padding: 20px 0;
 }
 
 button {
@@ -373,11 +362,60 @@ button {
 }
 
 .circleAnimation {
+  display: none;
+  padding: 50px 0;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.circle {
   width: 200px;
   height: 200px;
   background-color: #afefe4;
   border-radius: 50%;
   margin: 0 auto;
+  padding: 30px 0;
+  -webkit-animation: circle 10s ease-in-out infinite;
+          animation: circle 10s ease-in-out infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  50% {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    background-color: #d4c5e2;
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  50% {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    background-color: #d4c5e2;
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
 }
 
 audio {
@@ -388,7 +426,7 @@ footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: white;
+  background-color: #e2f2fd;
   opacity: 0.5;
 }
 
