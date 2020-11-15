@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 3</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Montserrat&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <div id="background" class="background">
-        
+
         <header>
             <h1>A Moment of Calm</h1>
-            <h2>Take some time to breathe through mindful meditation</h2>
+            <h2>Take time to breathe through meditation</h2>
         </header>
 
         <div class="wrapper">
@@ -21,10 +23,10 @@
                     <h3>Choose a background image to help set the scene:</h3>
                     <ul>
                         <li><button class="backgroundBtn" value="mountains">Mountains</button></li>
-                        <li><button class="backgroundBtn" value="animals">Animals</button></li>
-                        <li><button class="backgroundBtn" value="abstract">Abstract</button></li>
-                        <li><button class="randomBkgBtn" value="random">Random Background</button></li>
-                        <li><button class="resetBtn" value="reset">Reset Background</button></li>
+                        <li><button class="backgroundBtn" value="beach">Beach</button></li>
+                        <li><button class="backgroundBtn" value="trees">Trees</button></li>
+                        <li><button class="randomBkgBtn" value="random">Random</button></li>
+                        <li><button class="resetBtn" value="reset">Reset</button></li>
                     </ul>
                 </section>
 
@@ -34,8 +36,8 @@
                         <li><button class="audioBtn" value="ambientAudio">Ambient</button></li>
                         <li><button class="audioBtn" value="birdsAudio">Birds</button></li>
                         <li><button class="audioBtn" value="rainAudio">Rain</button></li>
-                        <li><button class="randomAudioBtn" value="rainAudio">Random Audio</button></li>
-                        <li><button class="pauseAudioBtn">Pause Audio</button></li>
+                        <li><button class="randomAudioBtn" value="rainAudio">Random</button></li>
+                        <li><button class="pauseAudioBtn">Pause</button></li>
                     </ul>
                 
                     <audio controls="controls" loop="loop" id="ambientAudio">
@@ -60,21 +62,21 @@
                         <li><button class="timerBtn" value="10">10 min</button></li>
                         <li><button class="timerBtn" value="5">5 min</button></li>
                         <li><button class="timerBtn" value="2">2 min</button></li>
-                        <li><button class="randomTimerBtn">Random Time</button></li>
-                        <li><button class="stopTimerBtn">Stop Timer</button></li>
+                        <li><button class="randomTimerBtn">Random</button></li>
+                        <li><button class="stopTimerBtn">Stop</button></li>
                     </ul>
 
                     <!-- form with drop down selection/submit instead? -->
 
-                    <div>
-                        <span class="minutes"></span>
-                        <span class="seconds"></span>
+                    <div class="timerDisplay">
+                        <span class="timer"></span>
+                        <!-- <p>click here for visualizer</p> -->
                     </div>
 
                 </section>
 
-                <section>
-                    <div class="circleAnimation hidden">
+                <section class="circleAnimation">
+                    <div class="circle">
                     </div>
                 </section>
                 

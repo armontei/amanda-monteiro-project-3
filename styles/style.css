@@ -271,6 +271,10 @@ button {
   color: #575365;
 }
 
+body {
+  position: relative;
+}
+
 .background {
   background: -webkit-gradient(linear, left bottom, left top, from(#d4c5e2), to(#afefe4));
   background: linear-gradient(0deg, #d4c5e2 0%, #afefe4 100%);
@@ -286,12 +290,12 @@ button {
   background-image: url(../images/mountains.jpg);
 }
 
-.animals {
-  background-image: url(../images/pupkit.jpg);
+.beach {
+  background-image: url(../images/beach.jpg);
 }
 
-.abstract {
-  background-image: url(../images/magenta.jpg);
+.trees {
+  background-image: url(../images/trees.jpg);
 }
 
 header {
@@ -308,13 +312,14 @@ h1 {
 h1 {
   font-family: 'Caveat', cursive;
   font-size: 7.5rem;
+  letter-spacing: 2px;
 }
 
 h2 {
   font-style: italic;
-  font-weight: 100;
   padding-bottom: 40px;
-  font-size: 3rem;
+  font-size: 2.8rem;
+  letter-spacing: 3px;
 }
 
 ul {
@@ -332,11 +337,11 @@ ul {
   color: blue;
 }
 
-.animals h3 {
+.beach h3 {
   color: green;
 }
 
-.abstract h3 {
+.trees h3 {
   color: purple;
 }
 
@@ -345,6 +350,8 @@ section {
 }
 
 button {
+  text-transform: uppercase;
+  width: 16rem;
   padding: 10px;
   cursor: pointer;
   margin: 10px 7px;
@@ -354,16 +361,23 @@ button {
   text-shadow: 1px 1px #e2f2fd;
 }
 
-.minutes,
-.seconds {
+.timerDisplay {
+  display: none;
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid #e2f2fd;
+  width: 30%;
+  border-radius: 20px;
   color: #e2f2fd;
+  cursor: pointer;
 }
 
 .circleAnimation {
-  width: 100px;
-  height: 100px;
-  background-color: linear-gradient(#e66465, #9198e5);
+  width: 200px;
+  height: 200px;
+  background-color: #afefe4;
   border-radius: 50%;
+  margin: 0 auto;
 }
 
 audio {
@@ -371,7 +385,7 @@ audio {
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   background-color: white;
