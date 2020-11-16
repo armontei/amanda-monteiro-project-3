@@ -8,6 +8,10 @@
     color: $jungle;
 }
 
+.trees .backgroundSection {
+    background-color: rgba(248, 248, 248, 0.6);
+}
+
 .trees button {
     color: $jungle;
     border: 2px solid $gainsboro;
@@ -24,4 +28,5 @@
 
 .trees footer {
     background-color: $gainsboro;
+    opacity: 0.9;
 }

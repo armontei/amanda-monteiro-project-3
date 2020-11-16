@@ -1,3 +1,14 @@
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+    // removing hover states for touch devices
+    button:hover,
+    .mountains button:hover,
+    .beach button:hover,
+    .trees button:hover {
+        background-color: transparent;
+    }
+}
+
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
     .timerDisplay {
@@ -26,6 +37,6 @@
     }
 
     .timerDisplay {
-        width: 100%;
+        width: 90%;
     }
 }
