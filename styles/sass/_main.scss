@@ -74,7 +74,6 @@ button:hover {
     padding: 20px;
     margin: 20px auto;
     width: 30%;
-    text-shadow: none;
 }
 
 .timerDisplay p {
@@ -114,7 +113,7 @@ button:hover {
 
     50% {
         transform: scale(3);
-        background-color: $independence;
+        opacity: 0.5;
     }
 
     100% {
@@ -137,11 +136,15 @@ footer {
 
 footer p {
     text-align: center;
+    overflow: hidden;
+}
+
+a {
+    font-weight: 700;
 }
 
 a:focus,
 a:hover {
-    font-weight: bold;
     text-transform: uppercase;
 }
 
