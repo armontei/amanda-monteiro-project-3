@@ -1,0 +1,27 @@
+.trees {
+    background-image: url(../images/trees.jpg);
+}
+
+.trees h1,
+.trees h2,
+.trees h3 {
+    color: $jungle;
+}
+
+.trees button {
+    color: $jungle;
+    border: 2px solid $gainsboro;
+}
+
+.trees button:focus,
+.trees button:hover {
+    background-color: $gainsboro;
+}
+
+.trees .circle {
+    background-color: $nickel;
+}
+
+.trees footer {
+    background-color: $gainsboro;
+}

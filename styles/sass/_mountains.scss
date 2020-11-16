@@ -1,0 +1,33 @@
+.mountains {
+    background-image: url(../images/mountains.jpg);
+}
+
+.mountains h1,
+.mountains h2,
+.mountains h3 {
+    color: $darkBlue;
+}
+
+.mountains .backgroundSection,
+.beach .backgroundSection,
+.trees .backgroundSection {
+    background-color: rgba(248, 248, 248, 0.5);
+}
+
+.mountains button {
+    color: $darkBlue;
+    border: 2px solid $cosmicLatte;
+}
+
+.mountains button:focus,
+.mountains button:hover {
+    background-color: $cosmicLatte;
+}
+
+.mountains .circle {
+    background-color: $bdazzledBlue;
+}
+
+.mountains footer {
+    background-color: $cosmicLatte;
+}

@@ -12,35 +12,22 @@ body {
     background-attachment: fixed;
 }
 
+// for large displays to fill the screen
 .viewHeight {
     min-height: 100vh;
 }
 
-// toggled background images
-.mountains {
-    background-image: url(../images/mountains.jpg);
-}
-
-.beach {
-    background-image: url(../images/beach.jpg);
-}
-
-.trees {
-    background-image: url(../images/trees.jpg);
-}
-
+// header
 header {
     background-image: url(../images/arches.png);
     padding-top: 50px;
+    margin-bottom: 20px;
 }
 
 h1 {
     margin: 0;
     text-shadow: 2px 2px $aliceBlue;
     padding-bottom: 20px;
-}
-
-h1 {
     font-family: 'Caveat', cursive;
     font-size: 7.5rem;
     letter-spacing: 2px;
@@ -53,28 +40,18 @@ h2 {
     letter-spacing: 3px;
 }
 
+// main sections
 ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-// .mountains h3 {
-//     color: blue;
-// }
-
-// .beach h3 {
-//     color: green;
-// }
-
-// .trees h3 {
-//     color: purple;
-// }
-
 section {
     padding: 20px 0;
 }
 
+// button styles
 button {
     text-transform: uppercase;
     width: 16rem;
@@ -84,28 +61,41 @@ button {
     border-radius: 20px;
     background-color: transparent;
     border: 2px solid $aliceBlue;
-    text-shadow: 1px 1px $aliceBlue;
 }
 
+button:focus,
+button:hover {
+    background-color: $aliceBlue;
+}
+
+// timer 
 .timerDisplay {
     display: none;
     padding: 20px;
     margin: 20px auto;
-    border: 2px solid $aliceBlue;
     width: 30%;
-    border-radius: 20px;
-    color: $aliceBlue;
-    cursor: pointer;
+    text-shadow: none;
 }
 
+.timerDisplay p {
+    font-size: 1.5rem;
+    padding-top: 15px;
+    text-transform: lowercase;
+}
+
+.timer {
+    text-transform: none;
+}
+
+// visualizer
 .circleAnimation {
-    padding: 50px 0;
+    padding: 30px 0 80px;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 .circle { 
-    // display: none;
     width: 200px;
     height: 200px;
     background-color: $blueGreen;
@@ -116,6 +106,7 @@ button {
     animation-play-state: paused;
 }
 
+// circle animation
 @keyframes circle {
     0% {
         transform: scale(1);
@@ -123,9 +114,8 @@ button {
 
     50% {
         transform: scale(3);
-        background-color: $thistle;
+        background-color: $independence;
     }
-
 
     100% {
         transform: scale(1);
@@ -136,6 +126,7 @@ audio {
     display: none;
 }
 
+// footer
 footer {
     position: absolute;
     bottom: 0;
@@ -148,5 +139,12 @@ footer p {
     text-align: center;
 }
 
+a:focus,
+a:hover {
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
-// hover over timer to hide / display - bar instead of timer
+a:visited {
+    color: inherit;
+}

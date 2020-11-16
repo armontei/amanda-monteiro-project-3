@@ -1,0 +1,27 @@
+.beach {
+    background-image: url(../images/beach.jpg);
+}
+
+.beach h1,
+.beach h2,
+.beach h3 {
+    color: $pineTree;
+}
+
+.beach button {
+    color: $darkBlue;
+    border: 2px solid $lemonMeringue;
+}
+
+.beach button:focus,
+.beach button:hover {
+    background-color: $lemonMeringue;
+}
+
+.beach .circle {
+    background-color: $cinerous;
+}
+
+.beach footer {
+    background-color: $lemonMeringue;
+}

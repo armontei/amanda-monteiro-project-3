@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 3</title>
+    <title>A Moment of Calm - Project 3</title>
+    <!-- loading Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Montserrat:wght@400&display=swap"
         rel="stylesheet">
+    <!-- CSS styles -->
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+    <!-- background that will change -->
     <div id="background" class="background">
         <div class="viewHeight">
             <header>
@@ -19,7 +22,7 @@
 
             <div class="wrapper">
                 <main>
-                    <section>
+                    <section class="backgroundSection">
                         <h3>Choose a background image to help set the scene:</h3>
                         <ul>
                             <li><button class="backgroundBtn" value="mountains">Mountains</button></li>
@@ -30,7 +33,7 @@
                         </ul>
                     </section>
 
-                    <section>
+                    <section class="backgroundSection">
                         <h3>Choose an audio you'd like to play:</h3>
                         <ul>
                             <li><button class="audioBtn" value="ambientAudio">Ambient</button></li>
@@ -56,7 +59,7 @@
                         </audio>
                     </section>
 
-                    <section>
+                    <section class="backgroundSection">
                         <h3>Choose how long you would like to meditate for:</h3>
                         <ul>
                             <li><button class="timerBtn" value="10">10 min</button></li>
@@ -67,25 +70,27 @@
                         </ul>
 
 
-                        <div class="timerDisplay">
+                        <button class="timerDisplay">
                             <span class="timer"></span>
                             <p>click here for visualizer</p>
-                        </div>
+                        </button>
                 </section>
-            </div><!-- viewHeight div -->
+            </div><!-- wrapper div -->
                 
                 <section class="circleAnimation">
                     <div class="circle">
                     </div>
                 </section>
                 
-            </div>
+        </div><!-- viewHeight div -->
         </main>
         <footer>
             <p>Created by Amanda Monteiro at <a href="https://junocollege.com/">Juno College</a></p>
         </footer>
-    </div>
+    </div> <!-- background div -->
+    <!-- loading jQuery libray -->
     <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+    <!-- javascript/jQuery -->
     <script src="script.js"></script>
 </body>
 </html>
