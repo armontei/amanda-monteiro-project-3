@@ -374,7 +374,7 @@ button:hover {
 .circle {
   width: 200px;
   height: 200px;
-  background-color: #adeee3;
+  background-color: #a0cfc7;
   border-radius: 50%;
   margin: 0 auto;
   padding: 30px 0;
@@ -456,8 +456,8 @@ a:visited {
   color: #172b66;
 }
 
-.mountains .backgroundSection,
-.beach .backgroundSection {
+.mountains .opacityAdjust,
+.beach .opacityAdjust {
   background-color: rgba(248, 248, 248, 0.5);
 }
 
@@ -517,7 +517,11 @@ a:visited {
   color: #002324;
 }
 
-.trees .backgroundSection {
+.trees h2 {
+  text-shadow: -0.5px -0.5px 0 #e3dde1, 0.5px -0.5px 0 #e3dde1, -0.5px 0.5px 0 #e3dde1, 0.5px 0.5px 0 #e3dde1;
+}
+
+.trees .opacityAdjust {
   background-color: rgba(248, 248, 248, 0.6);
 }
 
@@ -548,12 +552,20 @@ a:visited {
   .trees button:hover {
     background-color: transparent;
   }
+  a:hover {
+    text-transform: none;
+  }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   .timerDisplay {
     width: 50%;
+  }
+  h1,
+  h2 {
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -564,10 +576,10 @@ a:visited {
     font-size: 1.8rem;
   }
   h1 {
-    font-size: 6.5rem;
+    font-size: 6.4rem;
   }
   h2 {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     letter-spacing: 2px;
   }
   button {

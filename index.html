@@ -15,14 +15,17 @@
     <!-- background that will change -->
     <div id="background" class="background">
         <div class="viewHeight">
+            <!-- header -->
             <header>
                 <h1>A Moment of Calm</h1>
                 <h2>Take time to breathe through meditation</h2>
             </header>
 
-            <div class="wrapper">
-                <main>
-                    <section class="backgroundSection">
+            
+            <main>
+                <div class="wrapper">
+                    <!-- BACKGROUND SECTION -->
+                    <section class="opacityAdjust">
                         <h3>Choose a background image to help set the scene:</h3>
                         <ul>
                             <li><button class="backgroundBtn" value="mountains">Mountains</button></li>
@@ -33,7 +36,8 @@
                         </ul>
                     </section>
 
-                    <section class="backgroundSection">
+                    <!-- AUDIO SECTION -->
+                    <section class="opacityAdjust">
                         <h3>Choose an audio you'd like to play:</h3>
                         <ul>
                             <li><button class="audioBtn" value="ambientAudio">Ambient</button></li>
@@ -43,23 +47,27 @@
                             <li><button class="pauseAudioBtn">Pause</button></li>
                         </ul>
                     
+                        <!-- ambient audio -->
                         <audio controls="controls" loop="loop" id="ambientAudio">
                             <source src="./sounds/ambient.mp3" type="audio/mpeg" />
                             Your browser does not support the audio element.
                         </audio>
                     
+                        <!-- birds audio -->
                         <audio controls="controls" loop="loop" id="birdsAudio">
                             <source src="./sounds/birds.mp3" type="audio/mpeg" />
                             Your browser does not support the audio element.
                         </audio>
                     
+                        <!-- rain audio -->
                         <audio controls="controls" loop="loop" id="rainAudio">
                             <source src="./sounds/undertreeinrain.mp3" type="audio/mpeg" />
                             Your browser does not support the audio element.
                         </audio>
                     </section>
 
-                    <section class="backgroundSection">
+                    <!-- TIMER SECTION -->
+                    <section class="opacityAdjust">
                         <h3>Choose how long you would like to meditate for:</h3>
                         <ul>
                             <li><button class="timerBtn" value="10">10 min</button></li>
@@ -69,25 +77,32 @@
                             <li><button class="stopTimerBtn">Stop</button></li>
                         </ul>
 
-
+                        <!-- timer display -->
                         <button class="timerDisplay">
                             <span class="timer"></span>
                             <p>click here for breathing visualizer</p>
                         </button>
-                </section>
-            </div><!-- wrapper div -->
+                    </section>
+
+                </div><!-- wrapper div -->
                 
+                <!-- visualizer -->
                 <section class="circleAnimation">
                     <div class="circle">
                     </div>
                 </section>
-                
+
+            </main>
         </div><!-- viewHeight div -->
-        </main>
+            
+
+        <!-- footer -->
         <footer>
             <p>Created by Amanda Monteiro at <a href="https://junocollege.com/">Juno College</a></p>
         </footer>
+
     </div> <!-- background div -->
+
     <!-- loading jQuery libray -->
     <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
     <!-- javascript/jQuery -->
